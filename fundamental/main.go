@@ -21,6 +21,22 @@ func main() {
  // if you call only constEx,
  // will error msg "constEx evaluated but not used"
  //constEx
+ // =========Slices and Array==================
+ slice := make([]string, 3)
+ var arr = [3]int {3,4,5}
+ // array index 3 out of bounds [0:3]
+ // var arr = [3]int {3,4,5,6}
+ slice[0] = "Hi"
+ slice[1] = "Hello"
+ slice[2] = "bye"
+ // panic: runtime error: index out of range [3] with length 3
+ // s[3] = "Tata"
+ // append(slice, "Tata") evaluated but not used
+ // append(slice, "Tata")
+ slice = append(slice, "Tata")
+ slice = append(slice, "see")
+ slice = append(slice, "you")
+ fmt.Println(slice,arr)
 
 }
 
